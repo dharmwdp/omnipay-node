@@ -1,20 +1,20 @@
 {
   "name": "omnipay-node",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Official Node SDK for Omnipay API",
   "main": "dist/omnipay",
   "typings": "dist/omnipay",
   "scripts": {
-    "build": "npm run clean && npm run build:commonjs && npm run cp-ts",
-    "build:commonjs": "babel lib -d dist",
     "clean": "rm -rf dist && mkdir dist",
     "cp-ts": "cp lib/omnipay.d.ts dist/",
+    "build:commonjs": "babel lib -d dist",
+    "build": "npm run clean && npm run build:commonjs && npm run cp-ts",
     "debug": "npm run build && node-debug examples/index.js",
     "test": "npm run build && mocha --recursive --require babel-register test/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dharmwdp/omnipay-node.git"
+    "url": "https://github.com/dharmwdp/omnipay-node"
   },
   "keywords": [
     "omnipay",
